@@ -10,6 +10,10 @@ Requirements:
   * Bower
 
 
+#### Why Pokey?
+
+Cause Gumby needes some automation, thats why.
+
 #### Installation
 
 ```
@@ -23,3 +27,6 @@ Requirements:
 ToDo:
   * Much better docs
   * starter template
+
+
+- Alvaro Muir, @alvaromuir
