@@ -2,7 +2,7 @@
 # Alvaro Muir, @alvaromuir
 
 node_modules
-src/components
+src/bower_components
 .DS_Store
 .tmp
 .sass-cache
