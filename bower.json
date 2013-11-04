@@ -1,0 +1,35 @@
+{
+  "name": "Pokey",
+  "version": "0.0.1",
+  "homepage": "https://github.com/alvaromuir/pokey",
+  "authors": [
+    "Alvaro Muir <@alvaromuir>"
+  ],
+  "description": "A dev testing environment for the Gumby css framework",
+  "main": "index.js",
+  "keywords": [
+    "Gumby",
+    "css",
+    "framework"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gumby": "git://github.com/GumbyFramework/Gumby.git#~2.5.15",
+    "jquery": "~2.0.3",
+    "moment": "~2.4.0",
+    "requirejs": "~2.1.9",
+    "socket.io-client": "~0.9.16",
+    "lodash": "~2.2.1",
+    "normalize-css": "~2.1.3",
+    "modernizr": "~2.6.2",
+    "font-awesome": "~4.0.1"
+  }
+}

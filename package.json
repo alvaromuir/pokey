@@ -1,0 +1,46 @@
+{
+  "name": "Pokey",
+  "version": "0.0.1",
+  "description": "A dev testing environment for the Gumby css framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvaromuir/pokey"
+  },
+  "keywords": [
+    "Gumby",
+    "css",
+    "framework"
+  ],
+  "author": "Alvaro Muir <@alvaromuir>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/alvaromuir/pokey/issues"
+  },
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.6.0",
+    "chai": "~1.8.1",
+    "mocha": "~1.14.0",
+    "grunt-jade": "~0.4.0",
+    "request": "~2.27.0",
+    "phantomjs": "~1.9.2-2",
+    "grunt": "~0.4.1",
+    "connect-livereload": "~0.3.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "matchdep": "~0.3.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-open": "~0.2.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt-autoprefixer": "~0.4.0",
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-bower": "~0.7.0",
+    "grunt-coffeelint": "0.0.7",
+    "grunt-contrib-jshint": "~0.7.1"
+  }
+}

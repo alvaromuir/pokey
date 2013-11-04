@@ -1,0 +1,6 @@
+{
+	"build": {
+		"gumbyPath": "src/bower_components/gumby",
+		"outPath": "public/assets/js"
+	}
+}

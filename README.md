@@ -1,0 +1,25 @@
+# Pokey
+### A very good friend to Gumby
+
+#### Pokey is a grunt-powered [Gumby CSS framework](http://gumbyframework.com/) dev environment
+
+Requirements:
+  * Ruby
+  * Compass (and Sass)
+  * NPM
+  * Bower
+
+
+#### Installation
+
+```
+ $ git clone https://github.com/alvaromuir/pokey.git
+ $ cd pokey
+ $ npm install
+ $ bower install
+ $ grunt
+```
+
+ToDo:
+  * Much better docs
+  * starter template
