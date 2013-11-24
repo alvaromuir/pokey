@@ -1,7 +1,6 @@
 #global define 
-
+'use strict'
 @app = window.app ? {}
 
 define [], () ->
-  "use strict"
-  console.log "Pokey, a great friend to Gumby."
+  console.log 'Pokey, a great friend to Gumby.'

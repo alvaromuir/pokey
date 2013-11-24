@@ -10,3 +10,5 @@ style.min.css
 style.unprefixed.css
 style.prefixed.css
 scripts.min.js
+index.html
+*.js

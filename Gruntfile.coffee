@@ -53,7 +53,7 @@ module.exports = (grunt) ->
       dist:
         files: [
           expand: true
-          cwd: "<%= project.src %>/js"
+          cwd: "<%= project.src %>/coffee"
           src: "{,*/}*.coffee"
           dest: "<%= project.app %>/assets/js"
           ext: ".js"
@@ -90,19 +90,7 @@ module.exports = (grunt) ->
     Remove generated files for clean deploy
     ###
     clean:
-      dist: ["<%= project.assets %>/css/style.unprefixed.css", "<%= project.assets %>/css/style.prefixed.css"]
-
-    
-    ###
-    JSHint
-    https://github.com/gruntjs/grunt-contrib-jshint
-    Manage the options inside .jshintrc file
-    ###
-    jshint:
-      files: ["src/js/*.js", "Gruntfile.js"]
-      options:
-        jshintrc: ".jshintrc"
-
+      dist: ["<%= project.assets %>/css/*","<%= project.assets %>/js/*","<%= project.app %>/*.html"]
     
     ###
     Concatenate JavaScript files
@@ -218,7 +206,15 @@ module.exports = (grunt) ->
     watch:
       concat:
         files: "<%= project.src %>/js/{,*/}*.js"
-        tasks: ["concat:dev", "jshint"]
+        tasks: ["concat:dev"]
+
+      coffee:
+        files: ["<%= project.src %>/coffee/{,*/}*.coffee"]
+        tasks: ["coffee:dist"]
+
+      jade:
+        files: ["<%= project.src %>/jade/{,*/}*.jade"]
+        tasks: ["jade:html"]
 
       compass:
         files: "<%= project.src %>/sass/{,*/}*.{scss,sass}"
@@ -229,24 +225,16 @@ module.exports = (grunt) ->
           livereload: LIVERELOAD_PORT
 
         files: ["<%= project.app %>/{,*/}*.html", "<%= project.assets %>/css/*.css", "<%= project.assets %>/js/{,*/}*.js", "<%= project.assets %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}"]
-
-      coffee:
-        files: ["<%= project.src %>/js/{,*/}*.coffee"]
-        tasks: ["coffee:dist"]
-
-      jade:
-        files: ["<%= project.src %>/jade/{,*/}*.jade"]
-        tasks: ["jade:html"]
   
   ###
   Default task
   Run `grunt` on the command line
   ###
-  grunt.registerTask "default", ["compass:dev", "coffee:dist", "jade:html", "cssmin:dev", "bower:dev", "autoprefixer:dev", "jshint", "concat:dev", "connect:livereload", "open", "watch"]
+  grunt.registerTask "default", ["compass:dev", "coffee:dist", "jade:html", "cssmin:dev", "bower:dev", "autoprefixer:dev", "concat:dev", "connect:livereload", "open", "watch"]
   
   ###
   Build task
   Run `grunt build` on the command line
   Then compress all JS/CSS files
   ###
-  grunt.registerTask "build", ["compass:dist", "coffee:dist", "jade:html", "bower:dist", "autoprefixer:dist", "cssmin:dist", "clean:dist", "jshint", "uglify"]
+  grunt.registerTask "build", ["compass:dist", "coffee:dist", "jade:html", "bower:dist", "autoprefixer:dist", "cssmin:dist", "clean:dist", "uglify"]
